@@ -9,9 +9,9 @@
       </div>
       <ul id="dropdown-alignment" *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu"
         aria-labelledby="button-alignment">
-        <li role="menuitem"><a class="dropdown-item" href="#">admin@outlook.com</a></li>
+        <li role="menuitem"><a class="dropdown-item" [routerLink]="['/mi-cuenta']">admin@outlook.com</a></li>
         <li class="divider dropdown-divider"></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">Mi Cuenta</a></li>
+        <li role="menuitem"><a class="dropdown-item" [routerLink]="['/mi-cuenta']">Mi Cuenta</a></li>
         <li role="menuitem"><a class="dropdown-item" href="#">Mis Casos</a></li>
         <li class="divider dropdown-divider"></li>
         <li role="menuitem"><a class="dropdown-item" (click)="logout()"><i class="fa fa-sign-out"></i> Salir</a></li>

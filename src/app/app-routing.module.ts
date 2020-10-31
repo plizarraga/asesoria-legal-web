@@ -13,6 +13,7 @@ const routes: Routes = [
     component: MainLayoutComponent,
     children: [
       { path: '', loadChildren: () => import('./home/home.module').then(mod => mod.HomeModule) },
+      { path: 'mi-cuenta', loadChildren: () => import('./mi-cuenta/mi-cuenta.module').then(mod => mod.MiCuentaModule) },
     ]
   },
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule) },
