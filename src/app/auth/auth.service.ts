@@ -47,6 +47,6 @@ export class AuthService {
     // this.stopRefreshTokenTimer();
     localStorage.removeItem('user');
     this.userSubject.next(null);
-    this.router.navigate(['/']);
+    this.router.navigate(['/auth/signin']);
   }
 }
