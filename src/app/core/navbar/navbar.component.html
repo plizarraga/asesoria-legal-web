@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <a class="navbar-brand" [routerLink]="['/']">
+    Asesoría Legal
+  </a>
+    <div class="btn-group" dropdown placement="bottom left" *ngIf="!user">
+      <div id="button-alignment" dropdownToggle type="button" class="dropdown-toggle"
+        aria-controls="dropdown-alignment">
+        <i class="fa fa-user"></i> <span class="caret"></span>
+      </div>
+      <ul id="dropdown-alignment" *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu"
+        aria-labelledby="button-alignment">
+        <li role="menuitem"><a class="dropdown-item" href="#">admin@outlook.com</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Mi Cuenta</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Mis Casos</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Salir</a></li>
+      </ul>
+    </div>
+</nav>

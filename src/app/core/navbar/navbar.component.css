@@ -1,0 +1,50 @@
+@media (max-width: 767px) {
+  .search-form {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-search-toggle {
+    display: none;
+  }
+
+  .input-buscar {
+    min-width: 250px !important;
+  }
+}
+
+.search-form-active {
+  display: block;
+}
+
+.navbar-search-form-active {
+  justify-content: center;
+}
+
+.btn-login svg {
+  display: none;
+}
+
+@media (max-width: 404px) {
+  .btn-login span {
+    display: none;
+  }
+
+  .btn-login svg {
+    display: block;
+  }
+}
+
+/* Avatar styles */
+.navbar-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid transparent;
+}
+
+.navbar-avatar:hover {
+  border-color: var(--pink-dark);
+}
+
+/* END - Avatar styles */

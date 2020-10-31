@@ -5,10 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 
-// Third party Modules
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { ToastrModule } from 'ngx-toastr';
-
 // Custom Interceptors
 import { ErrorInterceptor } from './_shared/interceptors/error.interceptor';
 import { fakeBackendProvider } from './_shared/interceptors/fake-backend.interceptor';
@@ -18,8 +14,9 @@ import { JwtInterceptor } from './_shared/interceptors/jwt.interceptor';
 import { AppComponent } from './app.component';
 
 // Custom Modules
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './_shared/shared.module';
 import { AuthModule } from './auth/auth.module';
-
 
 @NgModule({
   declarations: [
@@ -29,11 +26,9 @@ import { AuthModule } from './auth/auth.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    BsDropdownModule.forRoot(),
-    ToastrModule.forRoot(),
     AuthModule,
-    // CoreModule,
-    // SharedModule
+    CoreModule,
+    SharedModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
