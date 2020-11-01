@@ -5,9 +5,11 @@ import { AuthGuard } from '../_shared/guards/auth.guard';
 import { IRole } from '../_shared/models';
 
 import { HomeComponent } from './home.component';
+import { CitasDetailsComponent } from './citas-details/citas-details.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [], data: { roles: [] } }
+  { path: '', component: HomeComponent, canActivate: [], data: { roles: [] } },
+  { path: 'citas/:id', component: CitasDetailsComponent, canActivate: [], data: { roles: [] } }
 ];
 
 @NgModule({

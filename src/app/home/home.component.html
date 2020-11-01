@@ -1,42 +1,13 @@
-<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4">Citas</h1>
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto">
+  <h1 class="display-4">Listado de citas</h1>
 </div>
-
 <div>
   <tabset>
-    <tab heading="Próximas Citas" id="tab1">
-      <table class="table table-striped">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Fecha</th>
-            <th scope="col">Abogado</th>
-            <th scope="col">Cliente</th>
-            <th scope="col">Tema</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td scope="row">Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>Mark</td>
-          </tr>
-        </tbody>
-      </table>
+    <tab heading="Próximas Citas">
+      <app-citas-list [citas]="citasProximas"></app-citas-list>
     </tab>
     <tab heading="Archivo">
-      <table class="table table-striped">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Fecha</th>
-            <th scope="col">Abogado</th>
-            <th scope="col">Cliente</th>
-            <th scope="col">Tema</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
+        <app-citas-list [citas]="citasArchivadas"></app-citas-list>
     </tab>
   </tabset>
 </div>

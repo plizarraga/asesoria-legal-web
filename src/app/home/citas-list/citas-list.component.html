@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Fecha</th>
+      <th scope="col">Abogado</th>
+      <th scope="col">Cliente</th>
+      <th scope="col">Tema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cita of citas">
+      <td scope="row"><a [routerLink]="['/citas', cita.id]">{{cita.fecha | date}}</a></td>
+      <td>{{cita.tema}}</td>
+      <td>{{cita.abogado}}</td>
+      <td>{{cita.tema}}</td>
+    </tr>
+  </tbody>
+</table>

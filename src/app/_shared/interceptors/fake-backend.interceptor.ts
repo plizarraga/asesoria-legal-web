@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize, map } from 'rxjs/operators';
+import faker from 'faker';
+// const faker = require('faker');
 
 // array in local storage for users
 const usersKey = 'asesoria-legal-fake-users';
@@ -37,33 +39,32 @@ if (!users.length) {
 
 // add test citas and save if citas array is empty
 if (!citas.length) {
-  citas.push({
-      id: 1,
-      fecha: new Date(),
-      hora: new Date(),
-      tema: 'Divorcios',
-      abogado: 'Bob Dylan',
-      cliente: 'Eric Clapton',
-      link: 'https://zoom.cita.com/1'
+  const temasMock = ['Divorcio', 'Contrato', 'Inmigración', 'Herencia'];
+
+  // Citas próximas
+  for (let index = 0; index < 7; index++) {
+    citas.push({
+      id: faker.random.number(),
+      fecha: faker.date.future(),
+      tema: faker.random.arrayElement(temasMock),
+      abogado: faker.name.findName(),
+      cliente: faker.name.findName(),
+      link: 'https://zoom.cita.com/' + faker.random.number()
     });
-  citas.push({
-    id: 2,
-    fecha: new Date(),
-    hora: new Date(),
-    tema: 'Divorcios',
-    abogado: 'Bob Dylan',
-    cliente: 'Eric Clapton',
-    link: 'https://zoom.cita.com/1'
-  });
-  citas.push({
-    id: 3,
-    fecha: new Date(),
-    hora: new Date(),
-    tema: 'Divorcios',
-    abogado: 'Bob Dylan',
-    cliente: 'Eric Clapton',
-    link: 'https://zoom.cita.com/1'
-  });
+  }
+
+  // Citas archivadas
+  for (let index = 0; index < 15; index++) {
+    citas.push({
+      id: faker.random.number(),
+      fecha: faker.date.past(),
+      tema: faker.random.arrayElement(temasMock),
+      abogado: faker.name.findName(),
+      cliente: faker.name.findName(),
+      link: 'https://zoom.cita.com/' + faker.random.number()
+    });
+  }
+
   localStorage.setItem(citasKey, JSON.stringify(citas));
 }
 // MOCK DATA - END
