@@ -47,7 +47,7 @@ if (!citas.length) {
       id: faker.random.number(),
       fecha: faker.date.future(),
       tema: faker.random.arrayElement(temasMock),
-      abogado: faker.name.findName(),
+      asesor: faker.name.findName(),
       cliente: faker.name.findName(),
       link: 'https://zoom.cita.com/' + faker.random.number()
     });
@@ -59,7 +59,7 @@ if (!citas.length) {
       id: faker.random.number(),
       fecha: faker.date.past(),
       tema: faker.random.arrayElement(temasMock),
-      abogado: faker.name.findName(),
+      asesor: faker.name.findName(),
       cliente: faker.name.findName(),
       link: 'https://zoom.cita.com/' + faker.random.number()
     });

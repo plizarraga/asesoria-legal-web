@@ -2,7 +2,7 @@ export interface ICita {
   id: number;
   fecha?: string;
   tema?: string;
-  abogado?: string;
+  asesor?: string;
   cliente?: string;
   link?: string;
 }

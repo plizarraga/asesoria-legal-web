@@ -1,1 +1,10 @@
-<p>citas-details works!</p>
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto">
+  <h1 class="display-4">Detalle de la cita</h1>
+</div>
+
+<ul class="list-group" *ngIf="cita">
+  <li class="list-group-item"><strong>Fecha:</strong> {{cita.fecha | date}}</li>
+  <li class="list-group-item"><strong>Tema:</strong> {{cita.tema}}</li>
+  <li class="list-group-item"><strong>Cliente:</strong> {{cita.cliente}}</li>
+  <li class="list-group-item"><strong>Asesor:</strong> {{cita.asesor}}</li>
+</ul>

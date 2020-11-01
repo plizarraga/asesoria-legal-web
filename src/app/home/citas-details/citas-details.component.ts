@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { first } from 'rxjs/operators';
 
 import { HomeService } from '../home.service';
-import { first } from 'rxjs/operators';
+import { ICita } from '../../_shared/models/cita.model';
 
 @Component({
   selector: 'app-citas-details',
@@ -12,6 +13,7 @@ import { first } from 'rxjs/operators';
 export class CitasDetailsComponent implements OnInit {
 
   public id: string;
+  public cita: ICita;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,6 +23,9 @@ export class CitasDetailsComponent implements OnInit {
     this.id = this.route.snapshot.params.id;
     this.homeService.getById(this.id)
       .pipe(first())
-      .subscribe((cita) => console.log(cita));
+      .subscribe((cita) => {
+        this.cita = cita;
+        console.log(cita);
+      });
   }
 }
