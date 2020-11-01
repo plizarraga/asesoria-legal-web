@@ -22,6 +22,7 @@ if (!users.length) {
       lastName: 'Doe',
       email: 'john.doe@outlook.com',
       password: '1234567',
+      description: faker.lorem.paragraph(),
       role: 'user',
       refreshTokens: []
     },
@@ -31,6 +32,7 @@ if (!users.length) {
       lastName: 'Hendrix',
       email: 'jhendrix@outlook.com',
       password: '1234567',
+      description: faker.lorem.paragraph(),
       role: 'asesor',
       refreshTokens: []
     });

@@ -8,8 +8,8 @@ import { HomeComponent } from './home.component';
 import { CitasDetailsComponent } from './citas-details/citas-details.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [AuthGuard], data: { roles: [] } },
-  { path: 'citas/:id', component: CitasDetailsComponent, canActivate: [AuthGuard], data: { roles: [] } }
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'citas/:id', component: CitasDetailsComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

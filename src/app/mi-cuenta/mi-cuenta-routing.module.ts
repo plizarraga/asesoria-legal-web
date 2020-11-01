@@ -7,7 +7,7 @@ import { IRole } from '../_shared/models';
 import { MiCuentaComponent } from './mi-cuenta.component';
 
 const routes: Routes = [
-  { path: '', component: MiCuentaComponent, canActivate: [AuthGuard], data: { roles: [] } }
+  { path: '', component: MiCuentaComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
